@@ -4,7 +4,7 @@ while N != 1:
  print(N)
  steps += 1
  if N%2 == 0:
- N=N//2
+    N=N//2
  else:
- N = 3*N+1
+    N = 3*N+1
 print("steps=",steps)

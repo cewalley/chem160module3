@@ -20,5 +20,5 @@ for ipart in range(npart):
             time+=counter
             break
         grid[x][y]=1   #Put particle in new location
-        avetime=time/npart
-        print("<t>=%5.2f <t>/r2=%5.2f"%(avetime, avetime/(side**2)))
+avetime=time/npart
+print("<t>=%5.2f <t>/r2=%5.2f"%(avetime, avetime/(side**2)))

@@ -10,17 +10,17 @@ for ipart in range(npart):
  x,y = 0,0
  # perform the random walk until particle aggregates
  while 1:
- grid[x][y]=0 #Remove particle from current spot
- # Randomly move particle
- sx,sy = choice(steps)
- x += sx
- y += sy
- # Enforce periodic boundaries
- if x < 0: x=side-1
- if y < 0: y=side-1
- if x==side: x=0
- if y==side: y=0
- grid[x][y]=1 #Put particle in new location
+        grid[x][y]=0 #Remove particle from current spot
+        # Randomly move particle
+        sx,sy = choice(steps)
+        x += sx
+        y += sy
+        # Enforce periodic boundaries
+        if x < 0: x=side-1
+        if y < 0: y=side-1
+        if x==side: x=0
+        if y==side: y=0
+        grid[x][y]=1 #Put particle in new location
         # Stop if you are next to a particle
         if (grid[(x+1)%side][y]+grid[x][(y+1)%side]+
             grid[(x+side-1)%side][y]+grid[x][(y+side-1)%side])>0:
